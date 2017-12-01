@@ -1,0 +1,565 @@
+@import url(fonts.css);
+
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body{ 
+  background-color: #e5e7e2; /*цвет фона на незадействованной странице, фиг знает как по другому)) */}
+}
+
+.clearfix{ /*очищаем флоаты, нужно запомнить*/
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper{ /*ограничиваем и центрируем весь центральный блок страницы*/
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.content{ /*ограничиваем и выравниваем по правому краю 
+всю колонку контента. Только какого-то фига таблица не хочет в него становиться,
+а точнее хочет но начинает залазить на футер, падла*/
+  max-width: 700px;
+  height: auto;
+  display: block;
+  float: right;
+  background-color: white;
+}
+
+.top_line{ /*топ лайн, заливает фон и позиционирует*/
+  background: #353a46 center top;
+  height: 72px;
+  width: 100%;
+  position: fixed;  
+  z-index: 999;
+}
+
+.logo{ /*выравниваем див с лого по левому борту*/
+  float: left;
+}
+
+h1{ /*стилизует Лого*/
+  font-size: 1.876em;
+  color: #a5adb8;
+  font-weight: bold;
+  padding-top: 15px;
+  margin-bottom: -6px;
+}
+
+h1:first-letter{
+  color: #ae4b5d;
+}
+
+header .logo h1{
+  text-transform: uppercase;
+}
+
+.bayline{ /*оформление текста расположенного под лого*/
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #656f7a;
+  max-width: 320px;
+}
+
+.position_search{ /*позиционируем форму поиска в топ-лайне*/
+  float: right;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-right: 5px;
+}
+
+.button_search{ /*позиционируем и оформляем кнопочку для поиска*/
+  background: url(../img/search_batton.png) no-repeat top / cover;
+  width: 32px;
+  height: 32px;
+  border: none;
+  vertical-align: middle;
+}
+
+.search1{/*позиционируем и оформляем инпут*/
+  height: 32px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #875f66; 
+  background-color: #24272d;
+  padding-left: 5px;
+  font: #5b636e;
+}
+
+.head_bg{ /*фоновый рисунок в хэде*/
+  background: url(../img/first_bg.jpg) no-repeat center 72px;
+  height: 240px;
+  max-width: 980px;
+  padding-top: 72px;
+}
+
+.bg_content{/* позиционируем блок с текстом в хэде*/
+  max-width: 490px;
+  margin-left: 40px;
+  padding-top: 15px;
+}
+
+.bg_text_1{ /*оформление первго абзац в хэде*/
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #282d33;
+  margin-top: -2px;
+}
+
+.bg_text_2 {/*оформление 2-го абзац в хэде*/
+  font-size: 1.125em;
+  font-weight: bold;
+  text-align: left;
+  color: #a5adb8;
+  letter-spacing: 1px;
+  padding-top: 10px;
+}
+
+.bg_text_3{/*оформление 3-го абзац в хэде*/
+  font-size: 0.875em;
+  color: #d9dcdf;
+  line-height: 1.429;
+  text-align: left;
+  margin-bottom: 18px;
+  margin-top: 5px;
+}
+
+
+h5{/*заголовк текста в хэде*/
+  font-size: 1.875em;
+  font-weight: bold;
+  text-align: left;
+  color: #a5adb8;
+  letter-spacing: 1px;
+}
+
+h5:first-letter{
+  color: #ae4b5d;
+}
+
+.nav_1{/*позиционируем и заливаем фон для меню*/
+  height: 37px;
+  background-color: #95161f;
+  width: auto;
+}
+
+.nav_list_item{/*оформляем пункты меню*/
+  float: right;
+  display: block;
+  text-align: right;
+  margin-left: 35px;
+  padding-top: 8px;
+  margin-right: 20px;
+}
+
+nav li a{/*оформляем отображение ссылок в меню*/
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white !important;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+}
+
+.submenu{ /*оформление выпадающего подменю*/
+  display: none;
+  margin-top: 10px;
+  position: absolute;
+  z-index: 999;
+}
+
+.item_submenu{/*оформление пунктов выподающего подменю*/
+  border: 1px solid white;
+  background-color: #95161f; 
+  text-align: left;
+  width: 150px;
+  height: 20px;
+  padding-left: 10px;
+  padding-top: 5px;
+  list-style: none;
+}
+
+li:hover ul.submenu { /*подменю будет выпадать при наведении мышки на Portfolio*/
+  display: block;
+}
+
+.hlebnie_krohi{ /*оформление полосы "хлебные крошки"*/
+  background-color: #f3f3f3;
+  height: 26px;
+  width: auto;
+  font-size: 11px;
+  text-align: left;
+  color: #6b6f74;
+  padding-top: 7px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+
+
+h2{ /*все заголовки в контенте*/
+  font-size: 1.5em;
+  color: #a5adb8;
+  font-weight: bold;
+  line-height: 0.583;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 19px;
+  margin-top: 20px;
+}
+
+h2:first-letter{
+  color: #ae4b5d;
+}
+
+a:link{
+  color: #95161f;
+}
+
+a:visited{
+  color: #95161f;
+}
+
+.text{ /*оформление текста в контента (блок справа от aside)*/
+  font-size: 0.875em;
+  color: #5c646e;
+  line-height: 1.429;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.box_icon{/*выстраиват картинки в контенте по левому краю и задаёт отступы между ними*/
+  margin-right: 14px;
+  text-align: center;
+  float: left;
+}
+
+.box_icon img{ /*тень картинок и отступ снизу*/
+  box-shadow: -0px 10px 10px #b2b2b2;
+  margin-bottom: 15px;
+}
+
+.box1{
+  float: left;
+}
+
+h3{ /*заголовки над картинками*/
+  font-size: 1.125em;
+  color: #282d33;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+h4{ /*заголовки списков*/
+  font-size: 0.875em;
+  color: #5c646e;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.box_list{/*выравнивает списки по левому краю и делает отступы между ними*/
+  float: left;
+  margin-right: 8px;
+ 
+}
+
+.list{/*ограничивает ширину списков и выравнивает по левому борду заголовки со списком*/
+  margin-left: 28px;
+  max-width: 215px;
+}
+
+.list_item{/*оформление пунктов списков*/
+  font-size: 0.875em;
+  color: #5c646e;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.sub_list{/*увеличивает отступ подсписка в первом списке*/
+  margin-left: 22px;
+}
+
+.list_none{/*убираем маркеры во втором списке*/
+  list-style: none;
+}
+
+.list_none ul{/*добавляем маркеры в подсписке 2-го списка*/
+  list-style-type: disc;
+}
+
+.form_contact{/*позиционируем правильно колонку асайда*/
+  background-color: white;
+  max-width: 236px;
+  margin-left: 10px;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.aside_content{/*задаёт фон за формами обратной связи и позиционируем его*/
+  margin-left: 15px;
+  margin-bottom: 60px;
+  max-width: 215px;
+  height: 410px;
+  background-color: #f3f3f3;
+  border: 1px solid #dadde0;
+}
+
+aside h3{/*рихтует стили для заголовка в асайде*/
+  font-size: 1.2em;
+  font-weight: 200px;
+  margin-bottom: 0px;   
+}
+
+.form_input{/*стилизует инпуты*/
+  margin-top: 15px;
+  margin-left: 15px;
+  border: 1px solid white;
+  background-color: #e3e4e5;
+  width: 185px;
+  height: 31px;
+  border-radius: 7px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.aside_button{/*стилизует кнопочку под инпутами*/
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 167px;
+  height: 42px;
+  background-color: #ad232d;
+  border: 5px solid white;
+  display: block;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button_name{/*стилизует название кнопочки под инпутами*/
+  font-size: 1em;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.5px;
+}
+
+.aside_text{/*стилизует текст под формой обратной связи*/
+  font-size: 0.75em;
+  line-height: 1.667;
+  text-align: left;
+  color: #5c646e;
+  margin-bottom: 5px;
+  margin-left: 15px; 
+}
+
+select{/*подрихтовует стили селектов*/
+  color: #757575;
+  border: 1px solid #989da1!important;
+}
+
+aside a{
+  font-size: 0.75em;
+  margin-left: 15px;
+}
+
+aside h3{
+  margin-top: 30px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+.box_for_table{
+  width: 980px;
+  margin-left: 280px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+}
+
+.table1{
+  width: 690px;
+}
+
+.first_line_th{
+  background-color: #9c4757;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  height: 35px;
+  font-size: 0.75em;
+}
+
+td:first-child{
+  text-align: center;
+}
+
+.table_radius1{
+ border-radius: 10px 0 0 0;
+}
+
+.table_radius2{
+  border-radius: 0 10px 0 0;
+}
+
+.table_radius3{
+  border-radius: 0 0 0 10px;
+}
+
+.table_radius4{
+  border-radius: 0 0 10px 0;
+}
+
+/*классом задать удобнее.. имхо
+th:first-child{
+  border-radius: 10px 0 0 0;
+}
+
+th:last-child{
+  border-radius: 0 10px 0 0;
+}
+*/
+
+td{
+  background-color: #282d33;
+  text-align: left;
+  color: #a5adb8;
+  height: 35px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 0.75em;
+}
+
+table a{
+  color: #d08b98 !important;
+}
+
+footer{
+  background: #262b32 center;
+  min-height: 240px;
+  width: auto;
+  border-top: 10px solid #ae4b5d;
+}
+
+.box_footerlists{
+  background: #262b32;
+  float: left;
+  margin-left: 40px;
+}
+
+
+.caption_footerlists{
+  font-size: 1.125em;
+  color: #a5adb8;
+  text-transform: capitalize;
+  width: 0 auto;
+  margin-top: 33px;
+  margin-bottom: 10px;
+  text-shadow: 0px 2px black;
+}
+
+.line_footer{
+  width: 270px;
+  height: 2px;
+  background-color: #191c20;
+  border: 0;
+}
+
+.line_footer2{
+  width: 270px;
+  height: 1.5px;
+  background-color: #40474f;
+  border: 0;
+}
+
+.caption_footerlists:first-child:first:letter{
+  color: #ae4b5d;
+}
+
+.list_in_footer1{
+  margin-bottom: 25px;
+  list-style-image: url(../img/icon_footer.png);
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.list_in_footer2{
+  margin-bottom: 25px;
+  margin-top: 10px;
+  list-style-position: inside;
+  list-style-image: url(../img/icon_footer2.png);
+}
+
+.list_in_footer3{
+  margin-bottom: 25px;
+  margin-top: 10px;
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.text_footer{
+  font-size: 12px;
+  color: #85898f !important;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.img_fb{
+  width: 30px;
+  height: auto;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+
+.text_tell_me {
+  font-size: 0.875em;
+  color: #a5adb8 ;
+  font-weight: bold;
+}
+
+.text_tell_me a{
+  text-decoration: none;
+  font-size: 0.875em;
+  color: #a5adb8 ;
+  font-weight: bold;
+}
+
+.list_in_footer3 a:first-child{
+  color: #d08b98;
+}
+
+.button_up{
+  position: fixed;
+  bottom: 15px;
+  right: 0px;
+ }
+
+.logo_up{ 
+  width: 150px;
+  height: auto;
+}
+
+.button_up img:hover{
+  display: block;
+}
+
+@media (max-width: 1000px){
+  .box_for_table{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+  }
+  .table{
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width:480px) and (max-width:800px){
+
+}
