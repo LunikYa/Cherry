@@ -667,18 +667,23 @@ footer>.wrapper{
 
   .bayline{ /*оформление текста расположенного под лого*/
     font-size: 0.7em;
-    max-width: 200px;
+    max-width: 150px;
   }
 
+  .search1{/*позиционируем и оформляем инпут*/
+    height: 32px;
+    width: 100px;
+  }
+  
   .text{ /*оформление текста в контента (блок справа от aside)*/
     font-size: 0.8em;
     margin-bottom: 16px;
   }
 
   .nav_list_item{/*оформляем пункты меню*/
-  margin-left: 0px;
+  margin-left: -5px;
   font-weight: 200;
-  font-size: 0.85em;
+  font-size: 0.80em;
   }
 
   .box_icon{/*выстраиват картинки в контенте по левому краю и задаёт отступы между ними*/
@@ -739,4 +744,25 @@ footer>.wrapper{
   .table1{
   width: 380px;
   }
+}
+
+@media (max-width: 320px){
+  .bayline{ /*оформление текста расположенного под лого*/
+    display: none;
+  }  
+
+  .nav_list_item{/*оформляем пункты меню*/
+  margin-left: -10px;
+  font-weight: 200;
+  font-size: 0.70em;
+  }
+
+  .button_search{ /*позиционируем и оформляем кнопочку для поиска*/
+  display: none;
+}
+
+.search1{/*позиционируем и оформляем инпут*/
+  height: 32px;
+  width: 100px;
+}
 }
