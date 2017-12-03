@@ -1,4 +1,4 @@
-@import url(fonts.css);
+@import url("fonts.css");
 
 *{ 
   margin: 0;
@@ -11,7 +11,7 @@ body{
 }
 
 .clearfix{ /*очищаем флоаты, нужно запомнить*/
-  content: "";
+  content:after: "";
   display: table;
   clear: both;
 }
@@ -42,7 +42,7 @@ body{
 
 .logo{ /*выравниваем див с лого по левому борту*/
   float: left;
-}
+} 
 
 h1{ /*стилизует Лого*/
   font-size: 1.876em;
@@ -199,6 +199,7 @@ li:hover ul.submenu { /*подменю будет выпадать при нав
   padding-top: 7px;
   padding-left: 25px;
   box-sizing: border-box;
+  margin-bottom: 
 }
 
 
@@ -229,6 +230,11 @@ a:visited{
 a:hover{
   text-decoration: underline;
 }
+
+.link_logo{
+  text-decoration: none !important;
+}
+
 
 .text{ /*оформление текста в контента (блок справа от aside)*/
   font-size: 0.875em;
@@ -376,6 +382,7 @@ aside h3{
   margin-left: 15px;
 }
 
+
 .box_for_table{
   width: 980px;
   margin-left: 280px;
@@ -441,13 +448,16 @@ table a{
 }
 
 footer{
-  background: #262b32 center;
-  min-height: 240px;
+  background: #262b32 center top / cover;
+  min-height: 250px;
   width: auto;
   border-top: 10px solid #ae4b5d;
 }
 
-.box_footerlists{
+footer>.wrapper{
+  background: #262b32;
+}
+.box_footerlists, .box_footerlists3{
   background: #262b32;
   float: left;
   margin-left: 40px;
@@ -550,21 +560,184 @@ footer{
   display: block;
 }
 
-@media (max-width: 1000px){
-  .box_for_table{
-    width: 10%;
-    margin: 0;
-    padding: 0;
-  }
-  .table{
-    width: 10%;
-  }
+.responsive_footer{/*открываем при уменьшении, а основной футер скрывается*/
+  text-align: center;
+  background-color: #262b32;
+  display: none;
 }
 
-@media screen and (min-width: 768px){
+@media (max-width: 1024px){
+  h1{
+    font-size: 1.6em;
+  }
+  
+.search1{/*позиционируем и оформляем инпут*/
+  width: 150px;
+}
+
+.bg_content{/* позиционируем блок с текстом в хэде*/
+  margin-left: 20px;
+}
+
+.bg_text_1, .bg_text_2{ /*оформление первго абзац в хэде*/
+  font-size: 1em;
+}
+
+.bg_text_3{/*оформление 3-го абзац в хэде*/
+  font-size: 0.9em;
+}
+
+h5{/*заголовк текста в хэде*/
+  font-size: 1.6em;
+}
+
+  .nav_list_item{/*оформляем пункты меню*/
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: 0.9em;
+  }
+
+  h2{ /*все заголовки в контенте*/
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 10px;
 
 }
 
-@media screen and (min-width:480px) and (max-width:800px){
+.content, .bayline, h1, .table1, caption{
+  padding-left: 10px;
+}
 
+  .content{
+  float: none;
+}
+
+  .hlebnie_krohi{
+   margin-bottom: -20px;
+  }
+  
+  aside {
+    display: none;
+  }
+
+  .form_contact{/*позиционируем правильно колонку асайда*/
+    display: none;
+}
+
+.box_for_table{
+  width: 600px;
+  margin-left: 0px;
+  float: none;
+}
+
+.table1{
+  width: 720px;
+}
+
+.first_line_th{
+  font-size: 0.7em;
+}
+
+td{
+  padding-left: 5px;
+  padding-right: 2px;
+  font-size: 0.7em;
+}
+
+.button_up{
+  display: none;
+}
+
+.box_footerlists3{
+  display: none;
+}
+
+.box_footerlists{
+  float: none;
+  margin: 0;
+  display: inline-block;
+
+}
+
+footer{
+  text-align: center;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 768px){
+
+.bayline{ /*оформление текста расположенного под лого*/
+  font-size: 0.7em;
+  max-width: 200px;
+}
+
+.text{ /*оформление текста в контента (блок справа от aside)*/
+  font-size: 0.8em;
+  margin-bottom: 16px;
+}
+
+.nav_list_item{/*оформляем пункты меню*/
+    margin-left: 0px;
+    font-weight: 200;
+    font-size: 0.85em;
+  }
+
+
+.box_icon{/*выстраиват картинки в контенте по левому краю и задаёт отступы между ними*/
+  margin-right: 14px;
+  display: inline-block;
+  float: none;
+}
+
+.box1{
+  text-align: center;
+}
+
+.box_icon img{ /*тень картинок и отступ снизу*/
+  margin-bottom: 10px;
+}
+
+h3{ /*заголовки над картинками*/
+  font-size: 0.95em;
+  margin-bottom: 16px;
+}
+
+.box_list{/*выравнивает списки по левому краю и делает отступы между ними*/
+  display: inline-block;
+  float: none;
+}
+
+.list_item{/*оформление пунктов списков*/
+  font-size: 0.8em;
+  margin-bottom: 8px;
+}
+
+.table1{
+  width: 540px;
+}
+
+.box_footerlists{
+    display: none;
+  }
+
+.responsive_footer{
+  display: block;
+}
+}
+
+@media (max-width: 480px){
+  
+.bayline{ /*оформление текста расположенного под лого*/
+  font-size: 0.7em;
+  max-width: 180px;
+}
+
+.nav_list_item{/*оформляем пункты меню*/
+    margin-left: -1px;
+    font-weight: 200;
+    font-size: 0.8em;
+  }
+
+  .table1{
+  width: 380px;
 }

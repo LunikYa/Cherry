@@ -1,0 +1,25 @@
+@media screen (min-width: 1024px){
+ 	aside {
+ 		display: none;
+ 	}
+
+}
+
+@media screen and (min-width:480px) and (max-width:800px){
+
+}
+
+@media (max-width: 1000px){
+  .box_for_table{
+    width: 10%;
+    margin: 0;
+    padding: 0;
+  }
+  .table{
+    width: 10%;
+  }
+}
+
+body{
+	background-color: black !important;
+}
