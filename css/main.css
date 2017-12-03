@@ -765,8 +765,7 @@ footer>.wrapper{
   font-size: 0.60em;
   margin-top: 5px;
   margin-right: 16px;
-
-  }
+}
 
   .button_search{ /*позиционируем и оформляем кнопочку для поиска*/
   display: none;
