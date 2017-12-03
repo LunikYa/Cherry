@@ -722,7 +722,7 @@ footer>.wrapper{
   float: none;
   }
   .table1{
-  width: 540px;
+  width: 100%;
   }
 
   .box_footerlists{
@@ -742,7 +742,7 @@ footer>.wrapper{
   }
 
   .nav_list_item{/*оформляем пункты меню*/
-    margin-left: -1px;
+    margin-left: -10px;
     font-weight: 200;
     font-size: 0.8em;
   }
@@ -751,20 +751,20 @@ footer>.wrapper{
   margin-left: 0px;
   float: none;
   }
-  .table1{
-  width: 380px;
-  }
-}
+
 
 @media (max-width: 320px){
+
   .bayline{ /*оформление текста расположенного под лого*/
     display: none;
   }  
 
   .nav_list_item{/*оформляем пункты меню*/
-  margin-left: -10px;
+  margin-left: -12px;
   font-weight: 200;
-  font-size: 0.7em;
+  font-size: 0.60em;
+  margin-top: 5px;
+  margin-right: 16px;
 
   }
 
@@ -776,9 +776,35 @@ footer>.wrapper{
   height: 32px;
   width: 100px;
 }
+
+.table1{
+  width: 88%;
+   overflow: hidden;
+}
+
  .box_for_table{
-  max-width: 320px;
+  max-width: 265px;
   margin-left: 0px;
   float: none;
+  overflow: hidden;
+  }
+
+
+  .bg_text_1, .bg_text_2{ /*оформление первго абзац в хэде*/
+    font-size: 0.8em;
+  }
+
+  .bg_text_3{/*оформление 3-го абзац в хэде*/
+    font-size: 0.8em;
+  }
+
+  h5{/*заголовк текста в хэде*/
+    font-size: 1.5em;
+  }
+
+  h2{ /*все заголовки в контенте*/
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 10px;
   }
 }
