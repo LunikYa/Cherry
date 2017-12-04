@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <meta property="og:title" content="Знания"/>
+    <meta property="og:image" content="https://zooclub.ru/skat/img.php?w=700&h=700&img=./attach/12000/12669.jpg"/>
+    <meta property="og:description" content="Сижу башкой своей ломаю эти знания"/>
+    <meta property="og:url" content="file:///G:/Leon/StudyIT/Projects/Cherry/index.html"/>
  </head>
 <body>
         <header id="up">
@@ -15,9 +19,9 @@
                         <p class="bayline">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> 
                     </div>
                     <div class="position_search">
-                        <form action="#" method="get" name="Search" >
+                        <form action="#" method="get" name="Search" id="search">
                         <input class="search1" type="text" name="Search" placeholder="Search...">
-                        <button class="button_search" type="submit"></button>
+                        <button form="#search" class="button_search" type="submit"></button>
                         </form>
                     </div>
                 </div>
@@ -131,14 +135,11 @@
          <aside class="form_contact clearfix"><!--Через жопу конечно.. Ну и ладно-->
             <div class="aside_content">
                  <h3>Contact Us</h3>
-                 <form action="" method="get" name="Your Name" >
-                    <input class="form_input" type="text" name="search123" placeholder="Your Name">
-                 <form action="" method="get" name="Your Name" >
-                    <input class="form_input" type="text" name="search23" placeholder="Daytime Number">
-                 <form action="" method="get" name="Your Name" >
-                    <input class="form_input" type="text" name="search12" placeholder="Email Address">
-                 <form action="" method="get" name="Your Name" >
-                    <input class="form_input" type="text" name="search12" placeholder="City">
+                 <form action="#" method="GET" name="feedback" id="feedback">
+                    <input class="form_input" type="text" name="Name" placeholder="Your Name">
+                    <input class="form_input" type="text" name="Daytime Number" placeholder="Daytime Number">
+                    <input class="form_input" type="text" name="Email Address" placeholder="Email Address">
+                    <input class="form_input" type="text" name="City" placeholder="City">
                  <select class="form_input">
                     <option>Problem With</option>
                     <option>1</option>                  
@@ -149,8 +150,7 @@
                     <option>1</option>                  
                     <option>2</option>
                  </select>
-                 <form action="" method="get" name="Your Name" >
-                    <button class="aside_button" type="submit"><span class="button_name">Lorem ipsum dolor</span></button> 
+                    <button form="#feedback" class="aside_button" type="submit"><span class="button_name">Lorem ipsum dolor</span></button> </form>
             </div>
             <div>
                 <h3>Headline</h3>
@@ -163,8 +163,7 @@
                 aliquip ex ea commodo</p>
                 <a href="#" target="_blank">More about</a>
             <div>
-        </aside>
-            
+        </aside>            
             <div class="box_for_table">                             
                     <table class="table1">
                         <caption><h2>Table</h2></caption>

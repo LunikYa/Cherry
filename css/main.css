@@ -765,21 +765,17 @@ footer>.wrapper{
   font-size: 0.60em;
   margin-top: 5px;
   margin-right: 16px;
-}
-
-  .button_search{ /*позиционируем и оформляем кнопочку для поиска*/
-  display: none;
-}
+  }
 
 .search1{/*позиционируем и оформляем инпут*/
   height: 32px;
   width: 100px;
-}
+  }
 
-.table1{
+  .table1{
   width: 88%;
    overflow: hidden;
-}
+  } 
 
  .box_for_table{
   max-width: 265px;
