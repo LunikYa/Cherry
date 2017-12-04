@@ -16,6 +16,8 @@ body{
   clear: both;
 }
 
+
+
 .wrapper{ /*ограничиваем и центрируем весь центральный блок страницы*/
   max-width: 980px;
   margin: 0 auto;
