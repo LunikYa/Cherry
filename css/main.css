@@ -16,8 +16,6 @@ body{
   clear: both;
 }
 
-
-
 .wrapper{ /*ограничиваем и центрируем весь центральный блок страницы*/
   max-width: 980px;
   margin: 0 auto;
@@ -789,7 +787,6 @@ footer>.wrapper{
   float: none;
   overflow: hidden;
   }
-
 
   .bg_text_1, .bg_text_2{ /*оформление первго абзац в хэде*/
     font-size: 0.8em;
