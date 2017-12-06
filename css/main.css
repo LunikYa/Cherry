@@ -23,10 +23,8 @@ body{
 }
 
 .content{ /*ограничиваем и выравниваем по правому краю 
-всю колонку контента. Только какого-то фига таблица не хочет в него становиться,
-а точнее хочет но начинает залазить на футер, падла, посему пришлось её закинуть во врапп и ограничить отступом*/
+всю колонку контента.*/
   max-width: 700px;
-  height: auto;
   display: block;
   float: right;
   background-color: white;
@@ -43,7 +41,6 @@ body{
 .logo{ /*выравниваем див с лого по левому борту*/
   float: left;
 } 
-
 
 h1{ /*стилизует Лого*/
   font-size: 1.876em;
@@ -93,7 +90,11 @@ header .logo h1{
   font: #5b636e;
 }
 
-/* рабочие стили к слайдеру 
+.search1:hover{
+  background-color: #C0C0C0;
+}
+
+/* рабочие стили к слайдеру, всё работает но слайдер не нужен тут
 .slider{
 overflow: hidden;
 }
@@ -149,18 +150,18 @@ overflow: hidden;
 
 .head_bg{ /*фоновый рисунок в хэде*/
  background: url(../img/first_bg.jpg) no-repeat center 72px;
-  height: 240px;
-  max-width: 980px;
+ height: 240px;
+ max-width: 980px;
  padding-top: 72px;
 }
 
 .bg_content{/* позиционируем блок с текстом в хэде*/
- max-width: 490px;
+  max-width: 490px;
   margin-left: 40px;
   padding-top: 15px;
 }
 
-.bg_text_1{ /*оформление первго абзац в хэде*/
+.bg_text_1{ /*оформление первого абзац в хэде*/
   font-size: 1.125em;
   font-weight: bold;
   color: #282d33;
@@ -204,6 +205,10 @@ h5:first-letter{
   width: auto;
 }
 
+.nav_1:hover{
+  background-color: #75161f
+}
+
 .nav_list_item{/*оформляем пункты меню*/
   float: right;
   display: block;
@@ -216,10 +221,14 @@ h5:first-letter{
 nav li a{/*оформляем отображение ссылок в меню*/
   text-decoration: none ;
   text-transform: capitalize;
-  color: white !important;
-  font-weight: bold;
   font-size: 1em;
   text-align: left;
+  font-weight: 200;
+  color: white !important;
+}
+
+nav li a:hover{
+  font-weight: bold;
 }
 
 .submenu{ /*оформление выпадающего подменю*/
@@ -282,14 +291,13 @@ a:visited{
   color: #95161f;
 }
 
-a:hover{
+section a:hover{
   text-decoration: underline;
 }
 
-.link_logo{
-  text-decoration: none !important;
+footer a:hover{
+  text-decoration: underline;
 }
-
 
 .text{ /*оформление текста в контента (блок справа от aside)*/
   font-size: 0.875em;
@@ -366,6 +374,7 @@ h4{ /*заголовки списков*/
   margin-left: 10px;
   display: inline-block;
   padding-top: 20px;
+  height: 1020px;
 }
 
 .aside_content{/*задаёт фон за формами обратной связи и позиционируем его*/
@@ -403,14 +412,20 @@ aside h3{/*рихтует стили для заголовка в асайде*/
   background-color: #ad232d;
   border: 5px solid white;
   display: block;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.aside_button:hover{
+   border: 5px solid silver;
 }
 
 .button_name{/*стилизует название кнопочки под инпутами*/
   font-size: 1em;
   color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
   letter-spacing: 0.5px;
+}
+
+.button_name:hover{
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.9);
 }
 
 .aside_text{/*стилизует текст под формой обратной связи*/
@@ -440,14 +455,16 @@ aside h3{
 
 
 .box_for_table{
-  width: 980px;
+  width: ;
   margin-left: 280px;
   margin-right: 10px;
   padding-bottom: 15px;
 }
 
 .table1{
-  width: 690px;
+  width: 100%;
+  margin-right: 10px;
+  padding-bottom: 15px;
 }
 
 .first_line_th{
@@ -503,6 +520,10 @@ table a{
   color: #d08b98 !important;
 }
 
+.table1 td:hover{
+  background-color: #95161f;
+}
+
 footer{
   background: #262b32 center top / cover;
   height: 250px;
@@ -529,6 +550,10 @@ footer>.wrapper{
   margin-top: 33px;
   margin-bottom: 10px;
   text-shadow: 0px 2px black;
+}
+
+.first_letter_footer{
+  color: #ae4b5d;
 }
 
 .line_footer{
@@ -584,6 +609,9 @@ footer>.wrapper{
   vertical-align: middle;
 }
 
+.img_fb:hover{
+  box-shadow: 1px 1px 50px black;
+}
 
 .text_tell_me {
   font-size: 0.875em;
@@ -621,6 +649,19 @@ footer>.wrapper{
   text-align: center;
   background-color: #262b32;
   display: none;
+}
+
+.aside_responsive{
+  display: none;
+  text-align: center;
+  background-color: #f3f3f3;
+  max-width: 100%;
+  height: 100%;
+}
+
+.aside_responsive button{
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 1024px){
@@ -672,8 +713,12 @@ footer>.wrapper{
   .hlebnie_krohi{
   margin-bottom: -20px;
   }
-  
-  aside {
+
+  .aside_responsive{
+    display: block;
+  }
+
+  aside{
   display: none;
   }
 
@@ -687,8 +732,12 @@ footer>.wrapper{
   float: none;
   }
 
-  .table1{
-    width: 720px;
+  table thead{
+   display: none;
+  }
+
+   table td:before{
+   content: attr(data-label);
   }
 
   .first_line_th{
@@ -771,26 +820,28 @@ footer>.wrapper{
   font-size: 0.8em;
   margin-bottom: 8px;
   }
- .box_for_table{
-  max-width: 540px;
-  margin-left: 0px;
-  float: none;
-  }
-  .table1{
-  width: 100%;
-  }
 
-  .box_footerlists{
+ .box_footerlists{
   display: none;
   }
 
   .responsive_footer{
   display: block;
   }
+
+  .list_in_footer3{
+  margin-bottom: 0px;
 }
+  .text_footer:last-child{
+    margin-bottom: 15px;
+  }
+
+  footer {
+    height: auto;
+  }
+ }
 
 @media (max-width: 480px){
-  
   .bayline{ /*оформление текста расположенного под лого*/
     font-size: 0.7em;
     max-width: 180px;
@@ -801,12 +852,6 @@ footer>.wrapper{
     font-weight: 200;
     font-size: 0.8em;
   }
- .box_for_table{
-  max-width: 380px;
-  margin-left: 0px;
-  float: none;
-  }
-
 
 @media (max-width: 320px){
 
@@ -822,21 +867,9 @@ footer>.wrapper{
   margin-right: 16px;
   }
 
-.search1{/*позиционируем и оформляем инпут*/
+  .search1{/*позиционируем и оформляем инпут*/
   height: 32px;
   width: 100px;
-  }
-
-  .table1{
-  width: 88%;
-   overflow: hidden;
-  } 
-
- .box_for_table{
-  max-width: 265px;
-  margin-left: 0px;
-  float: none;
-  overflow: hidden;
   }
 
   .bg_text_1, .bg_text_2{ /*оформление первго абзац в хэде*/
