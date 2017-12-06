@@ -24,7 +24,7 @@ body{
 
 .content{ /*ограничиваем и выравниваем по правому краю 
 всю колонку контента. Только какого-то фига таблица не хочет в него становиться,
-а точнее хочет но начинает залазить на футер, падла*/
+а точнее хочет но начинает залазить на футер, падла, посему пришлось её закинуть во врапп и ограничить отступом*/
   max-width: 700px;
   height: auto;
   display: block;
@@ -43,6 +43,7 @@ body{
 .logo{ /*выравниваем див с лого по левому борту*/
   float: left;
 } 
+
 
 h1{ /*стилизует Лого*/
   font-size: 1.876em;
@@ -92,15 +93,69 @@ header .logo h1{
   font: #5b636e;
 }
 
+/* рабочие стили к слайдеру 
+.slider{
+overflow: hidden;
+}
+
+.slide{
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.slide img{
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-top: 72px;
+}
+
+.text_slider {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  transform: translate(25px, -30%);
+  overflow: hidden;
+}
+
+Кнопочки на слайдере, не красиво в этом макете
+.owl-prev, .owl-next{
+ position: absolute;
+  top: 95%;
+  display: block;
+  height: 150px;
+  background-repeat: no-repeat;
+  width: 180px;
+  -webkit-transform: translate(-50px, -50%);
+      -ms-transform: translate(0px, -50%);
+          transform: translate(0px, -50%); 
+  opacity: 0.5;
+}
+
+.owl-prev:hover, .owl-next:hover {
+  opacity: 0.7; 
+}
+
+.owl-prev{
+  left: 3%;
+  background-image: url("../img/prev.png"); 
+}
+
+.owl-next {
+  right: 3%;
+  background-image: url("../img/next.png"); 
+}*/
+
 .head_bg{ /*фоновый рисунок в хэде*/
-  background: url(../img/first_bg.jpg) no-repeat center 72px;
+ background: url(../img/first_bg.jpg) no-repeat center 72px;
   height: 240px;
   max-width: 980px;
-  padding-top: 72px;
+ padding-top: 72px;
 }
 
 .bg_content{/* позиционируем блок с текстом в хэде*/
-  max-width: 490px;
+ max-width: 490px;
   margin-left: 40px;
   padding-top: 15px;
 }
