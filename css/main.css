@@ -732,10 +732,6 @@ footer>.wrapper{
   float: none;
   }
 
-  table thead{
-   display: none;
-  }
-
    table td:before{
    content: attr(data-label);
   }
