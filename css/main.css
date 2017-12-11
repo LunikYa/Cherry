@@ -399,6 +399,7 @@ aside h3{/*рихтует стили для заголовка в асайде*/
   border-radius: 7px;
   padding-left: 10px;
   box-sizing: border-box;
+  outline: none;
 }
 
 .form_input:hover{
@@ -441,7 +442,7 @@ aside h3{/*рихтует стили для заголовка в асайде*/
 
 select{/*подрихтовует стили селектов*/
   color: #757575;
-  border: 1px solid #989da1!important;
+  outline: none;
 }
 
 aside a{
@@ -584,7 +585,7 @@ footer>.wrapper{
 
 .list_in_footer2{
   margin-bottom: 25px;
-  margin-top: 10px;
+  margin-top: 8px;
   list-style-position: inside;
   list-style-image: url(../img/icon_footer2.png);
 }
@@ -760,10 +761,14 @@ footer>.wrapper{
   margin: 0;
   display: inline-block;
   }
-
+  
+  .box_footerlists3{
+   vertical-align: top;
+  }
+  
   footer{
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
   width: 100%;
   }
 }
@@ -850,7 +855,7 @@ footer>.wrapper{
 @media (max-width: 480px){
   .bayline{ /*оформление текста расположенного под лого*/
     font-size: 0.7em;
-    max-width: 180px;
+    max-width: 140px;
   }
 
   .nav_list_item{/*оформляем пункты меню*/
