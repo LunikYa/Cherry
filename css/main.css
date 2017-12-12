@@ -1,5 +1,6 @@
 @import url("fonts.css");
 
+
 *{ 
   margin: 0;
   padding: 0;
@@ -7,7 +8,8 @@
 }
 
 body{ 
-  background-color: #e5e7e2; /*цвет фона на незадействованной странице, фиг знает как по другому)) */}
+  background-color: #e5e7e2; /*цвет фона на незадействованной странице, фиг знает как по другому)) */
+  min-width: 320px;
 }
 
 .clearfix{ /*очищаем флоаты, нужно запомнить*/
@@ -88,10 +90,13 @@ header .logo h1{
   background-color: #24272d;
   padding-left: 5px;
   font: #5b636e;
+  color: white;
+  outline: none;
 }
 
 .search1:hover{
   background-color: #C0C0C0;
+  color: black;
 }
 
 /* рабочие стили к слайдеру, всё работает но слайдер не нужен тут
@@ -232,7 +237,7 @@ nav li a:hover{
 
 .submenu{ /*оформление выпадающего подменю*/
   display: none;
-  margin-top: 10px;
+  margin-top: 5px;
   position: absolute;
   z-index: 999;
 }
@@ -251,7 +256,9 @@ nav li a:hover{
 li:hover ul.submenu { /*подменю будет выпадать при наведении мышки на Portfolio*/
   display: block;
 }
-
+.li_submenu{
+  padding-bottom: 5px;
+}
 .bread_crumbs{ /*оформление полосы "хлебные крошки"*/
   background-color: #f3f3f3;
   height: 26px;
@@ -605,7 +612,7 @@ footer>.wrapper{
 }
 
 .img_fb{
-  width: 30px;
+  width: 24px;
   height: auto;
   margin-left: 5px;
   vertical-align: middle;
@@ -638,8 +645,9 @@ footer>.wrapper{
   right: 0px;
   opacity: 0.2;
 }
+
 .button_up:hover{
-	opacity: 0.6;
+  opacity: 0.6;
 }
 
 .logo_up{ 
@@ -668,8 +676,9 @@ footer>.wrapper{
     width: 150px;
   }
 
-  .bg_content{/
-    margin-left: 20px;
+  .bg_content{
+    margin-left: 10px;
+    padding-top: 20px;
   }
 
   .bg_text_1, .bg_text_2{ /*оформление первго абзац в хэде*/
@@ -678,6 +687,7 @@ footer>.wrapper{
 
   .bg_text_3{/*оформление 3-го абзац в хэде*/
     font-size: 0.9em;
+    margin-right: 10px;
   }
 
   h5{
@@ -692,29 +702,29 @@ footer>.wrapper{
   }
 
   h2{ /*все заголовки в контенте*/
-  font-size: 1.3em;
-  line-height: 1.5;
-  margin-bottom: 10px;
+    font-size: 1.3em;
+    line-height: 1.5;
+    margin-bottom: 10px;
   }
 
-  .content, .bayline, h1, .table1, caption{
-  padding-left: 10px;
+  .content, .bayline, h1, h2, .table1, caption, .box1, .text, .form_contact{
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .content{
-  float: none;
-  margin: 0 auto;
-  }
-
-  .bread_crumbs{
-  margin-bottom: -20px;
+    float: none;
+    margin: 0 auto;
+    padding: 0px;
   }
 
   .form_contact {
-    max-width: none;
+    max-width: 700px;
     margin-left: 0px;
     height: auto;
     text-align: center;
+    margin: 0 auto;
+    display: block;
   }
 
   .aside_content {
@@ -760,14 +770,20 @@ footer>.wrapper{
   display: none;
   }
 
+   .list_in_footer1{
+  text-align: left;
+   }
+
+  .list_in_footer2 {
+    text-align: left;
+    margin-left: 30px;
+  }
+  
   .box_footerlists, .box_footerlists3{
   float: none;
   margin: 0;
   display: inline-block;
-  }
-  
-  .box_footerlists3{
-   vertical-align: top;
+  vertical-align: top;
   }
   
   footer{
@@ -843,18 +859,6 @@ footer>.wrapper{
 
  @media (max-width: 560px){/*можно без него, но так красивше*/
   
-  .responsive_footer{
-    display: block;
-  }
-
-  .box_footerlists, .box_footerlists3{
-  display: none;
-  }
-
-  .img_fb {
-    margin-top: 10px;
-  }
-}
 
 @media (max-width: 480px){
   .bayline{ /*оформление текста расположенного под лого*/
@@ -869,7 +873,7 @@ footer>.wrapper{
   }
 }
   
-@media (max-width: 320px){
+@media (max-width: 319px){
   .bayline{ /*оформление текста расположенного под лого*/
     display: none;
   }  
