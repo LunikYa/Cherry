@@ -1,6 +1,5 @@
 @import url("fonts.css");
 
-
 *{ 
   margin: 0;
   padding: 0;
@@ -203,6 +202,70 @@ h5:first-letter{
   color: #ae4b5d;
 }
 
+.toggle-mnu span:after, .toggle-mnu span:before{
+  content: "";
+  position: absolute; 
+}
+
+.toggle-mnu span{
+  width: 100%;
+  color: white;
+  font-weight: 400;
+  padding: 5px;
+  transition: all 0.3s;
+  top: px;
+  background-color: #95161f;
+  /*height: 2px;
+  background-color: #44c0c2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  left: 0; */
+}
+
+.toggle-mnu{
+  float: right;
+  position: fixed;
+  right: 10px;
+  top: 0;
+  text-align: center;
+  display: none;
+
+  margin-top: 0;
+  cursor: pointer; 
+}
+
+.toggle-mnu span {
+  position: relative;
+  display: inline-block; 
+}
+
+.toggle-mnu span:after {
+  top: ; }
+
+.toggle-mnu span:before {
+  top: ;
+}
+
+.toggle-mnu.on span {
+  background-color: transparent; 
+}
+/*
+.toggle-mnu.on span:before {
+  -webkit-transform: rotate(45deg) translate(-1px, 0px);
+  -ms-transform: rotate(45deg) translate(-1px, 0px);
+  transform: rotate(45deg) translate(-1px, 0px); 
+}
+
+.toggle-mnu.on span:after {
+  -webkit-transform: rotate(-45deg) translate(6px, -7px);
+  -ms-transform: rotate(-45deg) translate(6px, -7px);
+  transform: rotate(-45deg) translate(6px, -7px); 
+}
+*/
 .nav_1{/*позиционируем и заливаем фон для меню*/
   height: 37px;
   background-color: #95161f;
@@ -798,6 +861,35 @@ footer>.wrapper{
     font-size: 0.7em;
     max-width: 150px;
   }
+
+  .nav_1{
+    width: 100%;
+    display: none;
+  }
+
+  .nav_1 li{
+    display: block;
+    padding: 10px 40px;
+  }
+  
+  .nav_1 a{
+    border: 3px solid transparent;
+    padding: 10px 20px;
+  }
+
+  .nav_1 a:hover{
+    padding: 10px 20px;
+  }
+  
+  .toggle-mnu{
+    display: block !important;
+    margin-top: 25px;
+    z-index: 9999;
+  }
+
+  .button_search {
+    margin-right: 40px;
+}
 
   .search1{
     height: 32px;
